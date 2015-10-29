@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>YiLaGuan</title><link href="http://www.yilaguan.cc/" rel="alternate"></link><link href="http://www.yilaguan.cc/feeds/linux.atom.xml" rel="self"></link><id>http://www.yilaguan.cc/</id><updated>2015-10-29T00:00:00+08:00</updated><entry><title>命令-赶紧的</title><link href="http://www.yilaguan.cc/Linux.html" rel="alternate"></link><updated>2015-10-29T00:00:00+08:00</updated><author><name>YiHan</name></author><id>tag:www.yilaguan.cc,2015-10-29:Linux.html</id><summary type="html">&lt;h2&gt;查看端口的占用情况&lt;/h2&gt;
+&lt;p&gt;netstat -tln&lt;/p&gt;</summary><category term="Linux"></category></entry></feed>
