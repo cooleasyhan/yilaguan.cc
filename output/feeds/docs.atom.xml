@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>YiLaGuan</title><link href="http://www.yilaguan.cc/" rel="alternate"></link><link href="http://www.yilaguan.cc/feeds/docs.atom.xml" rel="self"></link><id>http://www.yilaguan.cc/</id><updated>2015-10-29T00:00:00+08:00</updated><entry><title>Good Good Good 文</title><link href="http://www.yilaguan.cc/good-good-good-wen.html" rel="alternate"></link><updated>2015-10-29T00:00:00+08:00</updated><author><name>YiHan</name></author><id>tag:www.yilaguan.cc,2015-10-29:good-good-good-wen.html</id><summary type="html">&lt;h1&gt;Python&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html"&gt;Code Like a Pythonista: Idiomatic Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Docs"></category><category term="Python"></category></entry></feed>

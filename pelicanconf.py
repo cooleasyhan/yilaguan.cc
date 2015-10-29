@@ -32,7 +32,45 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+<<<<<<< HEAD
 STATIC_PATHS = ['images', 'pdfs']
 
+=======
+##########for buleidea##############
+THEME = 'pelican-blueidea'
+
+# Display pages list on the top menu
+DISPLAY_PAGES_ON_MENU = True
+
+# Display categories list on the top menu
+DISPLAY_CATEGORIES_ON_MENU = True
+
+# Display categories list as a submenu of the top menu
+DISPLAY_CATEGORIES_ON_SUBMENU = False
+
+# Display the category in the article's info
+DISPLAY_CATEGORIES_ON_POSTINFO = False
+
+# Display the author in the article's info
+DISPLAY_AUTHOR_ON_POSTINFO = False
+
+# Display the search form
+DISPLAY_SEARCH_FORM = False
+
+# Sort pages list by a given attribute
+PAGES_SORT_ATTRIBUTE = 'Title'
+
+# Display the "Fork me on Github" banner
+GITHUB_URL = None
+
+# Blogroll
+LINKS 
+
+# Social widget
+SOCIAL
+
+
+##############for blue idea###########
+>>>>>>> 0c0d539ac4821b5ac2b48af316634b44fe00cb9f
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
