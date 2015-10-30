@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<feed xmlns="http://www.w3.org/2005/Atom"><title>YiLaGuan</title><link href="http://www.yilaguan.cc/" rel="alternate"></link><link href="http://www.yilaguan.cc/feeds/all.atom.xml" rel="self"></link><id>http://www.yilaguan.cc/</id><updated>2010-12-03T00:00:00+08:00</updated><entry><title>My super title</title><link href="http://www.yilaguan.cc/my-super-post.html" rel="alternate"></link><updated>2010-12-03T00:00:00+08:00</updated><author><name>YiHan</name></author><id>tag:www.yilaguan.cc,2010-12-03:my-super-post.html</id><summary type="html">&lt;p&gt;This is the content of my super blog post.&lt;/p&gt;</summary><category term="thats"></category><category term="awesome"></category></entry></feed>
+=======
 <feed xmlns="http://www.w3.org/2005/Atom"><title>YiLaGuan</title><link href="http://www.yilaguan.cc/" rel="alternate"></link><link href="http://www.yilaguan.cc/feeds/all.atom.xml" rel="self"></link><id>http://www.yilaguan.cc/</id><updated>2015-10-29T00:00:00+08:00</updated><entry><title>发布ADF Essentials 至Glassfish</title><link href="http://www.yilaguan.cc/ADF.html" rel="alternate"></link><updated>2015-10-29T00:00:00+08:00</updated><author><name>YiHan</name></author><id>tag:www.yilaguan.cc,2015-10-29:ADF.html</id><summary type="html">&lt;h2&gt;软件安装&lt;/h2&gt;
 &lt;h3&gt;JAVA&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;JAVA_HOME=/home/yihan/glassfish/jdk1.8.0_65&lt;/span&gt;
@@ -164,3 +167,4 @@ Below is V4  &lt;/li&gt;
 if __name__ == &amp;#39;__main__&amp;#39;:
     test()
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category><category term="matplotlib"></category></entry></feed>
+>>>>>>> 0c0d539ac4821b5ac2b48af316634b44fe00cb9f

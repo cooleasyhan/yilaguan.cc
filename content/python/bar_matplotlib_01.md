@@ -3,6 +3,10 @@ Title: Python 柱状动图
 Tags: Python, matplotlib
 Slug: Python
 
+<<<<<<< HEAD
+# Python 柱状动图
+=======
+>>>>>>> 0c0d539ac4821b5ac2b48af316634b44fe00cb9f
 
 ## 安装依赖
 - apt-get install python-numpy

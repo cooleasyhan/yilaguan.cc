@@ -32,6 +32,10 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+<<<<<<< HEAD
+STATIC_PATHS = ['images', 'pdfs']
+
+=======
 ##########for buleidea##############
 THEME = 'notmyidea'
 
@@ -68,5 +72,6 @@ SOCIAL
 GITHUB_URL = 'https://github.com/cooleasyhan/'
 
 ##############for blue idea###########
+>>>>>>> 0c0d539ac4821b5ac2b48af316634b44fe00cb9f
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
