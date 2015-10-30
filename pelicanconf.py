@@ -33,10 +33,10 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 10
 
 ##########for buleidea##############
-THEME = 'pelican-blueidea'
+THEME = 'notmyidea'
 
 # Display pages list on the top menu
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
 # Display categories list on the top menu
 DISPLAY_CATEGORIES_ON_MENU = True
@@ -65,6 +65,7 @@ LINKS
 # Social widget
 SOCIAL
 
+GITHUB_URL = 'https://github.com/cooleasyhan/'
 
 ##############for blue idea###########
 # Uncomment following line if you want document-relative URLs when developing
