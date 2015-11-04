@@ -20,22 +20,20 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+LINKS = (
          ('CodeSearch', 'http://www.yilaguan.cc/cs'),
-         ('CodeSearch_IP_IP', 'http://123.56.41.91/cs'),)
-
+         ('CodeSearch_IP', 'http://123.56.41.91/cs'),
+	 ('Tags', 'http://123.56.41.91/tags.html'),
+	 ('Archives', 'http://123.56.41.91/archives.html')
+        )
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
-<<<<<<< HEAD
 STATIC_PATHS = ['images', 'pdfs']
 
-=======
 ##########for buleidea##############
 THEME = 'notmyidea'
 
@@ -72,6 +70,5 @@ SOCIAL
 GITHUB_URL = 'https://github.com/cooleasyhan/'
 
 ##############for blue idea###########
->>>>>>> 0c0d539ac4821b5ac2b48af316634b44fe00cb9f
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
