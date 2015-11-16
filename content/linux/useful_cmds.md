@@ -5,3 +5,6 @@ Slug: Linux
 
 ##查看端口的占用情况
 netstat -tln
+
+##查看32,64位系统
+getconf LONG_BIT

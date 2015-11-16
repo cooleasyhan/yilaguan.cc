@@ -12,6 +12,18 @@ TIMEZONE = 'Asia/Shanghai'
 
 DEFAULT_LANG = u'en'
 
+PLUGIN_PATHS = ['/u01/pelican/plugins/pelican-plugins']
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'txt',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    }
+}
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -22,9 +34,8 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (
          ('CodeSearch', 'http://www.yilaguan.cc/cs'),
-         ('CodeSearch_IP', 'http://123.56.41.91/cs'),
-	 ('Tags', 'http://123.56.41.91/tags.html'),
-	 ('Archives', 'http://123.56.41.91/archives.html')
+	 ('Tags', 'http://www.yilaguan.cc/tags.html'),
+	 ('Archives', 'http://yilaguan.cc/archives.html')
         )
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -32,34 +43,12 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
-STATIC_PATHS = ['images', 'pdfs']
+STATIC_PATHS = ['images', 'pdfs','robots.txt']
 
 ##########for buleidea##############
+
+
 THEME = 'notmyidea'
-
-# Display pages list on the top menu
-DISPLAY_PAGES_ON_MENU = False
-
-# Display categories list on the top menu
-DISPLAY_CATEGORIES_ON_MENU = True
-
-# Display categories list as a submenu of the top menu
-DISPLAY_CATEGORIES_ON_SUBMENU = False
-
-# Display the category in the article's info
-DISPLAY_CATEGORIES_ON_POSTINFO = False
-
-# Display the author in the article's info
-DISPLAY_AUTHOR_ON_POSTINFO = False
-
-# Display the search form
-DISPLAY_SEARCH_FORM = False
-
-# Sort pages list by a given attribute
-PAGES_SORT_ATTRIBUTE = 'Title'
-
-# Display the "Fork me on Github" banner
-GITHUB_URL = None
 
 # Blogroll
 LINKS 
