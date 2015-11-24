@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>重构_改善既有代码的设计 &mdash; YiLaGuan</title>
+  <meta name="author" content="YiHan">
+
+
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="www.yilaguan.cc/favicon.png" rel="icon">
+
+  <link href="www.yilaguan.cc/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="www.yilaguan.cc/">YiLaGuan</a></h1>
+</hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+    <li><a href="/">首页</a></li>
+      <li class="active">
+        <a href="www.yilaguan.cc/category/du-shu-bi-ji.html">读书笔记</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/ebs.html">Ebs</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/java.html">Java</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/linux.html">Linux</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/python.html">Python</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/wen-dang.html">文档</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div>
+  <article class="hentry" role="article">
+<header>
+      <h1 class="entry-title">重构_改善既有代码的设计</h1>
+    <p class="meta">
+<time datetime="2015-10-28T00:00:00+08:00" pubdate>Wed 28 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>第一章 重构、第一个案例</h2>
+<h3>Tips</h3>
+<ul>
+<li>如果你发现自己需要为程序添加一个特性，而代码结构使你无法很方便地达成目的，那就先重构那个程序，是特性的添加比较容易进行，然后再添加特性</li>
+<li>先看看有没有一套OK的测试机制，这些测试要有自我检测能力</li>
+<li>尽量干掉一些临时变量，但是需要考虑性能问题</li>
+<li>函数应该放在它所使用的数据的所属对象内</li>
+<li>考虑使用多态来替换那些if else, switch case - State 模式</li>
+<li>测试、小修改、测试、小修改、测试、小修改</li>
+</ul>
+<h3>总结</h3>
+<p>该重构时就重构，自动化测试是前提，提炼函数，临时变量，switch case，变量名是重点
+但是自动化测试一般没有，怎么破？</p>
+<h2>第二章 重构原则</h2>
+<h3>正文</h3>
+<ul>
+<li>
+<p>定义</p>
+<ul>
+<li>对软件内部结构的一种调整， 目的是在不改变软件可观查行为的前提下，提高其可理解性，降低其修改成本</li>
+<li>使用一系列重构手法， 在不改变软件可观察行为的前提下，调整其结构</li>
+</ul>
+</li>
+<li>
+<p>为何重构</p>
+<ul>
+<li>改进软件设计， 软件结构会流失， 重构维持其现有形态</li>
+<li>让软件更易理解</li>
+<li>帮助找到bug</li>
+<li>提高编程速度</li>
+</ul>
+</li>
+<li>
+<p>何时重构</p>
+<ul>
+<li>第一次就去做吧，第二次会不爽，忍忍， 第三次就重构吧</li>
+<li>添加功能时，如果发现不能轻松的添加你想要的功能，那就先重构他，然后再添加新功能</li>
+<li>代码复审时重构</li>
+</ul>
+</li>
+<li>
+<p>怎么跟经理说</p>
+<ul>
+<li>质量驱动 - 提</li>
+<li>进度驱动 - 不提，直接重构</li>
+</ul>
+</li>
+</ul>
+<h3>重构为什么有用</h3>
+<ul>
+<li>
+<p>现状</p>
+<ul>
+<li>难以阅读，难以修改</li>
+<li>逻辑重复，难以修改</li>
+<li>添加新逻辑，修改现有代码，难以修改</li>
+<li>复杂逻辑条件，难以修改</li>
+</ul>
+</li>
+<li>
+<p>目的</p>
+<ul>
+<li>容易阅读</li>
+<li>所有逻辑都只在唯一地点指定</li>
+<li>新的改动不会危及现有逻辑</li>
+<li>尽可能简单表达条件逻辑</li>
+</ul>
+</li>
+</ul>
+<h3>间接层与重构</h3>
+<p>计算机是这样一门科学：它相信所有问题都可以通过增加一个间接层来解决，一顿还是两顿烧烤？</p>
+<p>重构很多时候就是在增加间接层，大对象拆分成小对象，大函数拆成小函数
+优点：
+- 允许逻辑共享
+- 分开解释意图和实现<br />
+    - 其实就是给函数或者类取个好名字
+- 隔离变化
+- 封装条件逻辑</p>
+<ul>
+<li>重构 VS 事前设计</li>
+</ul></div>
+    <footer>
+<p class="meta">
+  <span class="byline author vcard">
+    Posted by <span class="fn">
+        YiHan
+    </span>
+  </span>
+<time datetime="2015-10-28T00:00:00+08:00" pubdate>Wed 28 October 2015</time>  <span class="categories">
+    <a class='category' href='www.yilaguan.cc/category/du-shu-bi-ji.html'>读书笔记</a>
+  </span>
+  <span class="categories">
+    <a class="category" href="www.yilaguan.cc/tag/reading.html">Reading</a>,    <a class="category" href="www.yilaguan.cc/tag/refactoring.html">Refactoring</a>  </span>
+</p><div class="sharing">
+</div>    </footer>
+  </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+  </section>
+</div>
+<aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post">
+          <a href="www.yilaguan.cc/ar-de-shi-wu-chu-li-jie-kou.html">AR 的事务处理接口</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/how-to-audit-in-oracle-ebs.html">How to Audit in Oracle EBS</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/kibana-elasticsearch-logstash.html">Kibana elasticsearch logstash</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/qi-yong-sessionji-bie-de-trace.html">启用session级别的trace</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/forms-runtime-diagnostics-frd.html">Forms Runtime Diagnostics (FRD)</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li><a href="www.yilaguan.cc/category/du-shu-bi-ji.html">读书笔记</a></li>
+        <li><a href="www.yilaguan.cc/category/ebs.html">ebs</a></li>
+        <li><a href="www.yilaguan.cc/category/java.html">java</a></li>
+        <li><a href="www.yilaguan.cc/category/linux.html">linux</a></li>
+        <li><a href="www.yilaguan.cc/category/python.html">python</a></li>
+        <li><a href="www.yilaguan.cc/category/wen-dang.html">文档</a></li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+    <a href="www.yilaguan.cc/tag/audit.html">Audit</a>,    <a href="www.yilaguan.cc/tag/java.html">Java</a>,    <a href="www.yilaguan.cc/tag/log.html">Log</a>,    <a href="www.yilaguan.cc/tag/python.html">Python</a>,    <a href="www.yilaguan.cc/tag/docs.html">Docs</a>,    <a href="www.yilaguan.cc/tag/ebs.html">EBS</a>,    <a href="www.yilaguan.cc/tag/excel.html">Excel</a>,    <a href="www.yilaguan.cc/tag/kibana.html">Kibana</a>,    <a href="www.yilaguan.cc/tag/adf.html">ADF</a>,    <a href="www.yilaguan.cc/tag/refactoring.html">Refactoring</a>,    <a href="www.yilaguan.cc/tag/glassfish.html">glassfish</a>,    <a href="www.yilaguan.cc/tag/elasticsearch.html">elasticsearch</a>,    <a href="www.yilaguan.cc/tag/matplotlib.html">matplotlib</a>,    <a href="www.yilaguan.cc/tag/linux.html">Linux</a>,    <a href="www.yilaguan.cc/tag/oracle.html">Oracle</a>,    <a href="www.yilaguan.cc/tag/reading.html">Reading</a>,    <a href="www.yilaguan.cc/tag/logstash.html">logstash</a>,    <a href="www.yilaguan.cc/tag/plsql.html">PLSQL</a>  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = 'www.yilaguan.cc/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'cooleasyhan',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="www.yilaguan.cc/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2015  YiHan &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="www.yilaguan.cc/theme/js/modernizr-2.0.js"></script>
+  <script src="www.yilaguan.cc/theme/js/ender.js"></script>
+  <script src="www.yilaguan.cc/theme/js/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var disqus_shortname = 'channel-yilaguan';
+    var disqus_identifier = '/zhong-gou-_gai-shan-ji-you-dai-ma-de-she-ji.html';
+    var disqus_url = 'www.yilaguan.cc/zhong-gou-_gai-shan-ji-you-dai-ma-de-she-ji.html';
+    var disqus_title = '重构_改善既有代码的设计';
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</body>
+</html>

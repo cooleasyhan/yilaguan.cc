@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>YiLaGuan</title>
+  <meta name="author" content="YiHan">
+
+
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="www.yilaguan.cc/favicon.png" rel="icon">
+
+  <link href="www.yilaguan.cc/theme/css/main.css" media="screen, projection"
+        rel="stylesheet" type="text/css">
+
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="www.yilaguan.cc/">YiLaGuan</a></h1>
+</hgroup></header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+
+<ul class="main-navigation">
+    <li><a href="/">首页</a></li>
+      <li >
+        <a href="www.yilaguan.cc/category/du-shu-bi-ji.html">读书笔记</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/ebs.html">Ebs</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/java.html">Java</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/linux.html">Linux</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/python.html">Python</a>
+      </li>
+      <li >
+        <a href="www.yilaguan.cc/category/wen-dang.html">文档</a>
+      </li>
+</ul></nav>
+  <div id="main">
+    <div id="content">
+<div class="blog-index">
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/ar-de-shi-wu-chu-li-jie-kou.html">AR 的事务处理接口</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-11-14T00:00:00+08:00" pubdate>Sat 14 November 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><p>最近由于会有大量的接口开发，重构了现有AR 的事务处理接口，将其作为后续所有事务处理接口的统一入口。在后期的项目中看看效果，如果效果OK， 考虑把收款接口，核销接口也用类似方法重构下，从测试脚本来看，使用还是比较简单的，就是感觉方法的调用会不会多了点，不过个人挺习惯和喜欢这种无脑的调用方法，后面会贴出来一个精简版的测试脚本</p>
+<p>结构如下：</p>
+<ul>
+<li>使用一个第三方的表作为借口表，如 Cux_Ar_Trx_Imp_t_Pub， 数据通过INTERFACE_RUN_ID 进行分组</li>
+<li>该表中有所有AR TRX api 所需的字段，后期随业务增加可以添加</li>
+<li>创建 PACKAGE Cux_Ar_Trx_Imp_Pub, 提供两个入口方法， #主要参数为INTERFACE_RUN_ID<ul>
+<li>Validate_Main</li>
+<li>Import_Main</li>
+</ul>
+</li>
+<li>
+<p>为了方便使用这个接口包 Cux_Ar_Trx_Imp_Pub ， 对insert 数据到Cux_Ar_Trx_Imp_t_Pub做了一层封装， 包： Cux_Ar_Trx_Imp_Pub_Wrap， 主要思想为对创建事务处理所需要的参数进行拆分方便使用和修改。</p>
+<ul>
+<li>利用record进行数据拆分：</li>
+<li>主要提供几类方法：<ul>
+<li>init : 生成interface_run_id， 初始化变量</li>
+<li>build 方法, build 方法帮忙生成上述record记录</li>
+<li>Add_Header, Add_Line 利用生成的record ...</li></ul></li></ul></li></ul></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/ar-de-shi-wu-chu-li-jie-kou.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/how-to-audit-in-oracle-ebs.html">How to Audit in Oracle EBS</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-11-09T00:00:00+08:00" pubdate>Mon 09 November 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>Metalink</h2>
+<ul>
+<li>How To Enable Auditing On A Table (文档 ID 1359749.1)</li>
+<li>How To Audit An Oracle Applications' User? (文档 ID 395849.1)</li>
+<li>Auditing: How Do I Audit Responsibilities and Data? (文档 ID 436316.1)</li>
+<li>Overview of Audit Trails in Oracle Applications (文档 ID 60828.1)</li>
+<li>Understanding Data Auditing in ...</li></ul></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/how-to-audit-in-oracle-ebs.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/kibana-elasticsearch-logstash.html">Kibana elasticsearch logstash</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-11-09T00:00:00+08:00" pubdate>Mon 09 November 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>Kibana elasticsearch logstash 日志系统搭建</h2>
+<h3>安装</h3>
+<ul>
+<li>yum install ruby rubygems</li>
+<li>/usr/bin/gem install bundler </li>
+<li>yum install java-1.7.0-openjdk</li>
+<li>yum install redis.x86_64   （存储日志信息）</li>
+<li>启动redis: redis-server /etc/redis.conf</li>
+<li>Kibana elasticsearch logstash 下载<ul>
+<li>https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.3.zip</li>
+<li>https://download.elastic.co/kibana/kibana/kibana-4 ...</li></ul></li></ul></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/kibana-elasticsearch-logstash.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/qi-yong-sessionji-bie-de-trace.html">启用session级别的trace</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-11-09T00:00:00+08:00" pubdate>Mon 09 November 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><div class="highlight"><pre><span class="x">DECLARE</span>
+<span class="x">  Session_Id binary_integer;</span>
+<span class="x">  Serial_Num binary_integer;</span>
+
+<span class="x">BEGIN</span>
+<span class="x">  SELECT Sid, Serial</span><span class="err">#</span><span class="x"></span>
+<span class="x">    INTO Session_Id, Serial_Num</span>
+<span class="x">    FROM V</span><span class="p">$</span><span class="nv">session</span><span class="x"> s</span>
+<span class="x">   WHERE s.Sid = Userenv(&#39;SID&#39;);</span>
+<span class="x">  Dbms_Monitor.session_trace_enable(Session_Id =&gt; Session_Id,</span>
+<span class="x">                                    Serial_Num =&gt; Serial_Num,</span>
+<span class="x">                                    Waits      =&gt; TRUE,</span>
+<span class="x">                                    Binds      =&gt; false);</span>
+<span class="x">  EXECUTE IMMEDIATE (&#39;ALTER Session SET Tracefile_Identifier = &#39;&#39;yihan&#39;&#39;&#39;);</span>
+
+<span class="x">  FOR Rec IN (SELECT * FROM Cux_Gl_Code_Combinations_b_v Gcc) LOOP</span>
+<span class="x">    NULL;</span>
+<span class="x">  END LOOP;</span>
+<span class="x">  Dbms_Monitor ...</span></pre></div></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/qi-yong-sessionji-bie-de-trace.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/forms-runtime-diagnostics-frd.html">Forms Runtime Diagnostics (FRD)</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-11-04T00:00:00+08:00" pubdate>Wed 04 November 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><p>The Forms Runtime Diagnostic (FRD) is a method for capturing all events that occur in a form session and writing a file with the details of those events. There is overhead in writing this file, so you should only use this for the purposes of development and debugging</p>
+<p>When a ...</p></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/forms-runtime-diagnostics-frd.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/log-file-location-for-oracle-e-business-suite.html">Log file location for Oracle E-Business Suite</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-10-30T00:00:00+08:00" pubdate>Fri 30 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>Log file location for Oracle E-Business Suite R12</h2>
+<ul>
+<li>Apache, OC4J and OPMN:<blockquote>
+<p>$LOG_HOME/ora/10.1.3/Apache
+$LOG_HOME/ora/10.1.3/j2ee
+$LOG_HOME/ora/10.1.3/opmn</p>
+</blockquote>
+</li>
+<li>Startup/Shutdown Log files:<blockquote>
+<p>$INST_TOP/apps/$CONTEXT_NAME/logs/appl/admin/log</p>
+</blockquote>
+</li>
+<li>Patch log:<blockquote>
+<p>$APPL_TOP/admin/$SID/log/</p>
+</blockquote>
+</li>
+<li>Autoconfig log file ...</li></ul></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/log-file-location-for-oracle-e-business-suite.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/you-yong-de-dai-ma.html">有用的代码</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-10-30T00:00:00+08:00" pubdate>Fri 30 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><ol>
+<li><a href="http://svn.apache.org/repos/asf/poi/trunk/src/examples/src/org/apache/poi/xssf/eventusermodel/XLSX2CSV.java">turn an big excel file into a CSV</a></li>
+</ol></div>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/ADF.html">发布ADF Essentials 至Glassfish</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-10-29T00:00:00+08:00" pubdate>Thu 29 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>软件安装</h2>
+<h3>JAVA</h3>
+<div class="highlight"><pre><span class="x">JAVA_HOME=/home/yihan/glassfish/jdk1.8.0_65</span>
+<span class="x">export PATH=</span><span class="p">$</span><span class="nv">JAVA_HOME</span><span class="x">/bin:</span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+</pre></div>
+
+
+<h3>Glassfish</h3>
+<ul>
+<li>Oracle GlassFish Sever is commercially supported version of GlassFish v3. It is recommended for production environments. 
+Below is V4  </li>
+<li>下载: https://glassfish.java.net/download.html</li>
+<li>unzip glassfish-4.1.1*zip</li>
+<li>glassfish4/bin/asadmin start-domain ...</li></ul></div>
+  <footer>
+    <a rel="full-article" href="www.yilaguan.cc/ADF.html">Read On &crarr;</a>
+  </footer>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/Linux.html">命令-赶紧的</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-10-29T00:00:00+08:00" pubdate>Thu 29 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h2>查看端口的占用情况</h2>
+<p>netstat -tln</p>
+<h2>查看32,64位系统</h2>
+<p>getconf LONG_BIT</p></div>
+  		</article>
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="www.yilaguan.cc/good-good-good-wen.html">Good Good Good 文</a>
+      </h1>
+    <p class="meta">
+<time datetime="2015-10-29T00:00:00+08:00" pubdate>Thu 29 October 2015</time>    </p>
+</header>
+
+  <div class="entry-content"><h1>Python</h1>
+<ol>
+<li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</a></li>
+</ol>
+<h1>Java</h1>
+<ol>
+<li><a href="http://www.cnblogs.com/rollenholt/archive/2011/08/28/2156357.html">java中的多线程</a></li>
+</ol></div>
+  		</article>
+<div class="pagination">
+    <a class="prev" href="www.yilaguan.cc/index2.html">&larr; Older</a>
+
+  <br />
+</div></div>
+<aside class="sidebar">
+  <section>
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      <li class="post">
+          <a href="www.yilaguan.cc/ar-de-shi-wu-chu-li-jie-kou.html">AR 的事务处理接口</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/how-to-audit-in-oracle-ebs.html">How to Audit in Oracle EBS</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/kibana-elasticsearch-logstash.html">Kibana elasticsearch logstash</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/qi-yong-sessionji-bie-de-trace.html">启用session级别的trace</a>
+      </li>
+      <li class="post">
+          <a href="www.yilaguan.cc/forms-runtime-diagnostics-frd.html">Forms Runtime Diagnostics (FRD)</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+      
+    <h1>Categories</h1>
+    <ul id="recent_posts">
+        <li><a href="www.yilaguan.cc/category/du-shu-bi-ji.html">读书笔记</a></li>
+        <li><a href="www.yilaguan.cc/category/ebs.html">ebs</a></li>
+        <li><a href="www.yilaguan.cc/category/java.html">java</a></li>
+        <li><a href="www.yilaguan.cc/category/linux.html">linux</a></li>
+        <li><a href="www.yilaguan.cc/category/python.html">python</a></li>
+        <li><a href="www.yilaguan.cc/category/wen-dang.html">文档</a></li>
+    </ul>
+  </section>
+ 
+
+  <section>
+  <h1>Tags</h1>
+    <a href="www.yilaguan.cc/tag/audit.html">Audit</a>,    <a href="www.yilaguan.cc/tag/java.html">Java</a>,    <a href="www.yilaguan.cc/tag/log.html">Log</a>,    <a href="www.yilaguan.cc/tag/python.html">Python</a>,    <a href="www.yilaguan.cc/tag/docs.html">Docs</a>,    <a href="www.yilaguan.cc/tag/ebs.html">EBS</a>,    <a href="www.yilaguan.cc/tag/excel.html">Excel</a>,    <a href="www.yilaguan.cc/tag/kibana.html">Kibana</a>,    <a href="www.yilaguan.cc/tag/adf.html">ADF</a>,    <a href="www.yilaguan.cc/tag/refactoring.html">Refactoring</a>,    <a href="www.yilaguan.cc/tag/glassfish.html">glassfish</a>,    <a href="www.yilaguan.cc/tag/elasticsearch.html">elasticsearch</a>,    <a href="www.yilaguan.cc/tag/matplotlib.html">matplotlib</a>,    <a href="www.yilaguan.cc/tag/linux.html">Linux</a>,    <a href="www.yilaguan.cc/tag/oracle.html">Oracle</a>,    <a href="www.yilaguan.cc/tag/reading.html">Reading</a>,    <a href="www.yilaguan.cc/tag/logstash.html">logstash</a>,    <a href="www.yilaguan.cc/tag/plsql.html">PLSQL</a>  </section>
+
+
+
+  <section>
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+      <li class="loading">Status updating...</li>
+    </ul>
+    <script type="text/javascript">
+      $.domReady(function(){
+          if (!window.jXHR){
+              var jxhr = document.createElement('script');
+              jxhr.type = 'text/javascript';
+              jxhr.src = 'www.yilaguan.cc/theme/js/jXHR.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(jxhr, s);
+          }
+
+          github.showRepos({
+              user: 'cooleasyhan',
+              count: 5,
+              skip_forks: false,
+              target: '#gh_repos'
+          });
+      });
+    </script>
+    <script src="www.yilaguan.cc/theme/js/github.js" type="text/javascript"> </script>
+  </section>
+
+    <section>
+        <h1>Social</h1>
+        <ul>
+            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+            <li><a href="#" target="_blank">Another social link</a></li>
+        </ul>
+    </section>
+
+</aside>    </div>
+  </div>
+  <footer role="contentinfo"><p>
+    Copyright &copy;  2015  YiHan &mdash;
+  <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
+</p></footer>
+  <script src="www.yilaguan.cc/theme/js/modernizr-2.0.js"></script>
+  <script src="www.yilaguan.cc/theme/js/ender.js"></script>
+  <script src="www.yilaguan.cc/theme/js/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var disqus_shortname = 'channel-yilaguan';
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+  </script>
+</body>
+</html>
