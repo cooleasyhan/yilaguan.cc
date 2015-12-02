@@ -1,3 +1,4 @@
+slug: doc
 Date: 2015-10-29
 Title: Good Good Good 文
 Tags: Docs, Python,

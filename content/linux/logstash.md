@@ -1,7 +1,7 @@
 Date: 2015-11-09
 Title: Kibana elasticsearch logstash
 Tags: Linux,Kibana,elasticsearch,logstash,Log
-
+sulg: logstash
 
 ##Kibana elasticsearch logstash 日志系统搭建
 

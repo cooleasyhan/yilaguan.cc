@@ -2,6 +2,7 @@ date: 2015-11-16
 auther: YiHan
 title: 优先队列Python实现
 tags: Algorithms, python, queue
+slug: priority_queue
 
 典型应用于任务调度，典型算法为堆排序
 

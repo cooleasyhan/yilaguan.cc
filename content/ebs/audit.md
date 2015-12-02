@@ -1,7 +1,7 @@
 Date: 2015-11-09
 Title: How to Audit in Oracle EBS
 Tags: Oracle, EBS, Audit
-
+sulg: audit
 
 ## Metalink
 - How To Enable Auditing On A Table (文档 ID 1359749.1)

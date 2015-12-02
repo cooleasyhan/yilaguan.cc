@@ -1,7 +1,7 @@
 Date: 2015-10-29
 Title: 发布ADF Essentials 至Glassfish
 Tags: Oracle, ADF, glassfish
-Slug: ADF
+Slug: adf_to_glassfish
 
 
 ## 软件安装

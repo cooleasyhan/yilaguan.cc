@@ -2,6 +2,7 @@ date: 2015-11-16
 author: YiHan
 title: 排序算法
 tags: Algorithms, sort, python
+slug: sort
 
 ##优先队列
 一句话：

@@ -1,7 +1,7 @@
 Date: 2015-11-04
 Title: Forms Runtime Diagnostics (FRD) 
 Tags: Oracle, EBS
-
+sulg: fdr
 
 
 The Forms Runtime Diagnostic (FRD) is a method for capturing all events that occur in a form session and writing a file with the details of those events. There is overhead in writing this file, so you should only use this for the purposes of development and debugging

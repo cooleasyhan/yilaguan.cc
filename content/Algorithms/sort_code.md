@@ -2,7 +2,7 @@ date: 2015-11-16
 author: YiHan
 title: 排序算法python实现
 tags: Algorithms, sort, python
-
+slug: sort_code
 
 ##Code
 SelectSort 选择排序  

@@ -1,7 +1,7 @@
 Date: 2015-10-28
 Title: Python 柱状动图
 Tags: Python, matplotlib
-
+sulg: matplotlib
 
 ## 安装依赖
 - apt-get install python-numpy

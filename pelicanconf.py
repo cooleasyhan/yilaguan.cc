@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'YiHan'
-SITENAME = u'Yi\'s Blog'
+SITENAME = u'Yi\'s Blog  -  Do. Or do not. There is no try'
 SITEURL = 'http://www.yilaguan.cc'
 
 PATH = 'content'
@@ -35,10 +35,16 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
+ ('rhettinger','https://rhettinger.wordpress.com/'),
+('小明明','http://www.dongwm.com/'),
+('keakon的涂鸦馆','http://www.keakon.net/'),
+('织网','http://zheng-ji.info/'),
+
+       
         )
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github 个人页','http://cooleasyhan.github.io'),
+          )
 
 DEFAULT_PAGINATION = 10
 
@@ -70,3 +76,8 @@ GITHUB_USER = 'cooleasyhan'
 DISQUS_SITENAME = u'yilaguan'
 #DISQUS_SECRET_KEY = u'82DN6UNrf8VQ4tsZDIJuChCPzskjpaWS4Ltx7PurqJsrqbT7raifLrzPPNSfLC4i'
 #DISQUS_PUBLIC_KEY = u'YkTOi7B19v3mvkwFHi0zvpYu4A3vC1g0ZFusNPIXWKFxvG2r22fCNTxxGG2kgrai'
+
+
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'

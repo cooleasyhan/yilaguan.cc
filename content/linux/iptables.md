@@ -2,6 +2,7 @@ date: 2015-11-18
 author: YiHan
 title: iptables 小结
 tags: Linux, iptables
+sulg: iptables
 
 ## 规则顺序
 iptables 按照设定顺序比对规则内容，如果封包资料与规则一致则执行操作：ACCEPT，DROP，REJECT， LOG。 LOG只会记录信息到/var/log/messages中，该封包还是会继续下面的规则比对  

@@ -8,3 +8,7 @@ netstat -tln
 
 ##查看32,64位系统
 getconf LONG_BIT
+
+## 去除注释，空行
+more php-fpm.conf | grep -v ^\; | grep -v ^$;
+

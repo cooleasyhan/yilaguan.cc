@@ -1,7 +1,7 @@
 Date: 2015-11-09
 Title: 启用session级别的trace
 Tags: Oracle, PLSQL
-
+sulg: enable_trace
 
 ```
 DECLARE

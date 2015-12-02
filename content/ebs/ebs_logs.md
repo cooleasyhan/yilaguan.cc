@@ -1,7 +1,7 @@
 Date: 2015-10-30
 Title: Log file location for Oracle E-Business Suite
 Tags: Oracle, EBS
-
+sulg: ebs_logs
 
 
 ## Log file location for Oracle E-Business Suite R12
