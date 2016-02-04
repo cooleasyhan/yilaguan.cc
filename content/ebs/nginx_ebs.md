@@ -64,7 +64,7 @@ http://app01.domain.name:8000  ===>   http://prod.domain.name:80
 ### 修改Host
 同app服务器
 ### 安装nginx
-[Nginx, Php-fpm 安装](http://www.yilaguan.cc/nginx-php-fpm.html)
+[Nginx, Php-fpm 安装](http://www.yilaguan.cc/posts/2015/11/26/nginx-php-fpm.html)
 ### 配置nginx
 
 nginx.conf

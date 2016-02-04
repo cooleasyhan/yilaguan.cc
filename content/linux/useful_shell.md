@@ -39,3 +39,8 @@ done
 
 ```
 
+
+## ubuntu命令行多线程断点续传下载工具-axel  
+```
+axel -n 10 xxxx.tar.gz
+```
